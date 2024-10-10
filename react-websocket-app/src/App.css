@@ -1,0 +1,119 @@
+@import 'leaflet/dist/leaflet.css';
+
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Aplica a todas las tablas para hacerlas scrollables con tamaño fijo */
+.table-container {
+  max-height: 300px; /* Ajusta esta altura según tus necesidades */
+  overflow-y: auto; /* Permite el desplazamiento vertical */
+  border: 1px solid #ddd; /* Añade un borde para separar la tabla */
+  margin: 10px 0; /* Añade espacio alrededor de las tablas */
+}
+
+/* Estilos básicos para las tablas */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background-color: #f4f4f4;
+  position: sticky;
+  top: 0; /* Fija el encabezado en la parte superior mientras se desplaza */
+  z-index: 1; /* Asegura que el encabezado se mantenga por encima */
+}
+
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+/* Updated CSS for improved layout */
+.layout-container {
+  display: flex;
+  width: 100%;
+  height: 80vh; /* Adjust the height as needed */
+}
+
+.map-container {
+  flex: 2; /* The map will take 2/3 of the width */
+  padding: 10px;
+  height: 100%;
+}
+
+/* Updated CSS for the chatbox */
+.chatbox-container {
+  flex: 1; /* Allow the chatbox to take up 1/3 of the width */
+  margin: 10px;
+  background-color: #b00909;
+  border: 1px solid #ccc;
+  border-radius: 1px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  height: 100%; /* Ensure the chatbox takes the full height of its parent container */
+}
+
+.chatbox-header {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.chatbox-messages {
+  padding: 10px;
+  overflow-y: auto;
+  flex-grow: 1; /* Ensure that this section grows to fill the available space */
+}
+
+.chatbox-message {
+  margin-bottom: 10px;
+  background-color: #e0e0e0;
+  padding: 5px;
+  border-radius: 5px;
+}
